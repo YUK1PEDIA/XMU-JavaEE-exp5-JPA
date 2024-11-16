@@ -3,7 +3,7 @@ package com.xmu.exp5jpa.controller;
 import com.xmu.exp5jpa.bo.Product;
 import com.xmu.exp5jpa.controller.dto.ProductDto;
 import com.xmu.exp5jpa.model.ReturnObject;
-import com.xmu.exp5jpa.service.ProductService;
+import com.xmu.exp5jpa.service.Impl.ProductServiceImpl;
 import com.xmu.exp5jpa.util.CloneFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class ProductController {
 
     @Autowired
-    private ProductService productService;
+    private ProductServiceImpl productService;
 
     @GetMapping("")
     public ReturnObject getProductsByName(@RequestParam String name) {
