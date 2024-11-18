@@ -52,6 +52,19 @@ spring:
     #JSON的时间数据的时区
     time-zone: GMT+8
 
+  #开启 JPA 的 sql-log 输出
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+
+  logging:
+    level:
+      org.hibernate.SQL: DEBUG
+      org.hibernate.type.descriptor.sql: TRACE
+
 mybatis:
   #domain对象的包
   type-aliases-package: cn.edu.xmu.javaee.goodsdemo.mapper.po
@@ -61,4 +74,7 @@ mybatis:
   configuration:
     #字段名和对象属性用驼峰映射
     map-underscore-to-camel-case: true
+
+
+
 
